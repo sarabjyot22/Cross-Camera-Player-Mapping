@@ -4,15 +4,13 @@ import numpy as np
 from ultralytics import YOLO
 from deep_sort_realtime.deepsort_tracker import DeepSort
 
-# Paths
+
 broadcast_path = "../broadcast.mp4"
 tacticam_path = "../tacticam.mp4"
 model_path = "../yolov11_custom.pt"
 
-# Load YOLO model
 model = YOLO(model_path)
 
-# Initialize DeepSort
 tracker_broadcast = DeepSort(max_age=30)
 tracker_tacticam = DeepSort(max_age=30)
 
@@ -51,7 +49,6 @@ broadcast_data = detect_and_track(broadcast_path, tracker_broadcast)
 print("Processing tacticam.mp4 ...")
 tacticam_data = detect_and_track(tacticam_path, tracker_tacticam)
 
-# Sample Output
 print("Sample Frame IDs from Broadcast Video:")
 for frame_id, data in list(broadcast_data.items())[:5]:
     print(f"Frame {int(frame_id)}: Player IDs: {list(data.keys())}")
