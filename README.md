@@ -13,7 +13,7 @@ pip install -r requirements.txt
 
 ### 2. Download Model
 
-Download the YOLOv11 model from [this link](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view) and place it in the root directory as `yolov11_custom.pt`.
+Download the YOLOv11 model from [this link](https://drive.google.com/file/d/1-5fOSHOSB9UXyP_enOoZNAMScrePVcMD/view) and place it in the root directory as `best.pt`.
 
 ### 3. Run the Code
 
